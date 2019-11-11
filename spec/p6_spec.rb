@@ -26,5 +26,9 @@ RSpec.describe Alimento do
 		it "Alimento tiene GEI" do
 			expect(@alimento.gei).to eq(7)
 		end
+
+		it "Alimento tiene terreno" do
+			expect(@alimento.terreno).to eq(8)
+		end
 	end
 end
