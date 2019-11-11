@@ -34,4 +34,9 @@ class Alimento
 	def devolver_genero
 		return @genero
 	end
+
+	def irenergia
+		@irenergia=(@lipidos*9)+(@proteinas*4)+(@carbohidratos*4)
+		return @irenergia
+	end
 end
