@@ -19,5 +19,8 @@ RSpec.describe Alimento do
 			expect(@alimento.carbohidratos).to eq(2)
 		end
 
+		it "Alimento tiene lipidos" do
+			expect(@alimento.lipidos).to eq(6)
+		end
 	end
 end
