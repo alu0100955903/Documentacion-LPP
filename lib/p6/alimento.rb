@@ -10,4 +10,8 @@ class Alimento
 	def devolver_nombre
 		return @nombre
 	end
+
+	def devolver_proteina
+		return @proteinas
+	end
 end
