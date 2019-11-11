@@ -1,9 +1,9 @@
 class Alimento
 
-	attr_reader :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno
+	attr_reader :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno, :genero
 
-	def initialize (nombre, proteinas, carbohidratos, lipidos, gei, terrerno)
-		@nombre, @proteinas, @carbohidratos, @lipidos, @gei, @terreno = nombre, proteinas, carbohidratos, lipidos, gei, terreno
+	def initialize (nombre, proteinas, carbohidratos, lipidos, gei, terrerno, genero)
+		@nombre, @proteinas, @carbohidratos, @lipidos, @gei, @terreno, @genero= nombre, proteinas, carbohidratos, lipidos, gei, terreno, genero
 	end
 
 
@@ -29,5 +29,9 @@ class Alimento
 
 	def devolver_terreno
 		return @terreno
+	end
+
+	def devolver_genero
+		return @genero
 	end
 end
