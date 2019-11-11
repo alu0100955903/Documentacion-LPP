@@ -2,8 +2,8 @@ require 'p6/alimento.rb'
 
 RSpec.describe Alimento do
 	before :each do
-		@alimento  = Alimento.new("carne",73,2,300,7,8,"hombre")
-		@alimento2 = Alimento.new("carne",33,2,240,7,8,"mujer")
+		@alimento  = Alimento.new("carne",54,21,300,7,8,"hombre")
+		@alimento2 = Alimento.new("carne",41,39,220,7,8,"mujer")
 	end
 
 	describe "Pruebas alimento" do
@@ -12,12 +12,8 @@ RSpec.describe Alimento do
 			expect(@alimento.nombre).to eq("carne")
 		end
 
-		it "Alimento tiene proteina" do
-			expect(@alimento.proteinas).to eq(73)
-		end
-
 		it "Alimento tiene carbohidratos" do
-			expect(@alimento.carbohidratos).to eq(2)
+			expect(@alimento.carbohidratos).to eq(21)
 		end
 
 		it "Alimento tiene lipidos" do
@@ -45,11 +41,11 @@ RSpec.describe Alimento do
 		end
 
 		it "Ingesta de proteinas recomentada hombre" do
-			expect(@alimento.irproteinas).to eq(54)
+			expect(@alimento.devolver_proteina).to eq(54)
 		end
 		
 		it "Ingesta de proteinas recomendada mujer" do
-			expect(@alimneto2.irproteinas).to eq(41)
+			expect(@alimento2.devolver_proteina).to eq(41)
 		end
 	end
 end
