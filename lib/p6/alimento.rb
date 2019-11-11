@@ -18,4 +18,8 @@ class Alimento
 	def devolver_carbohidratos
 		return @carbohidratos
 	end
+
+	def devolver_lipidos
+		return @lipidos
+	end
 end
