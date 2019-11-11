@@ -14,4 +14,8 @@ class Alimento
 	def devolver_proteina
 		return @proteinas
 	end
+
+	def devolver_carbohidratos
+		return @carbohidratos
+	end
 end
