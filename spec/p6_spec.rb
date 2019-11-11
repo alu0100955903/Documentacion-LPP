@@ -6,6 +6,7 @@ RSpec.describe Alimento do
 	end
 
 	describe "Pruebas alimento" do
+
 		it "Alimento tiene nombre" do
 			expect(@alimento.nombre) == "carne"
 		end
