@@ -22,5 +22,9 @@ RSpec.describe Alimento do
 		it "Alimento tiene lipidos" do
 			expect(@alimento.lipidos).to eq(6)
 		end
+
+		it "Alimento tiene GEI" do
+			expect(@alimento.gei).to eq(7)
+		end
 	end
 end
