@@ -6,4 +6,5 @@ class Alimento
 		@nombre, @proteinas, @carbohidratos, @lipidos, @gei, @terreno = nombre, proteinas, carbohidratos, lipidos, gei, terreno
 	end
 
+
 end
