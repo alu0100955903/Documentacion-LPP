@@ -14,5 +14,10 @@ RSpec.describe Alimento do
 		it "Alimento tiene proteina" do
 			expect(@alimento.proteinas).to eq(10)
 		end
+
+		it "Alimento tiene carbohidratos" do
+			expect(@alimento.carbohidratos).to eq(2)
+		end
+
 	end
 end
