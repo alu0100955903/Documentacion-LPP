@@ -22,4 +22,8 @@ class Alimento
 	def devolver_lipidos
 		return @lipidos
 	end
+
+	def devolver_gei
+		return @gei
+	end
 end
