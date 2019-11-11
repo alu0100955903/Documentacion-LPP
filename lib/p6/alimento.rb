@@ -26,4 +26,8 @@ class Alimento
 	def devolver_gei
 		return @gei
 	end
+
+	def devolver_terreno
+		return @terreno
+	end
 end
