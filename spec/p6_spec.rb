@@ -43,5 +43,13 @@ RSpec.describe Alimento do
 		it "Ingesta de energia mujer" do
 			expect(@alimento2.irenergia).to eq(2300)
 		end
+
+		it "Ingesta de proteinas recomentada hombre" do
+			expect(@alimento.irproteinas).to eq(54)
+		end
+		
+		it "Ingesta de proteinas recomendada mujer" do
+			expect(@alimneto2.irproteinas).to eq(41)
+		end
 	end
 end
