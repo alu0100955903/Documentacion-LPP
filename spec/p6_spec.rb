@@ -2,7 +2,8 @@ require 'p6/alimento.rb'
 
 RSpec.describe Alimento do
 	before :each do
-		@alimento = Alimento.new("carne",10,2,6,7,8,"hombre")
+		@alimento  = Alimento.new("carne",10,2,6,7,8,"hombre")
+		@alimento2 = Alimento.new("carne",10,2,6,7,8,"mujer")
 	end
 
 	describe "Pruebas alimento" do
@@ -33,6 +34,14 @@ RSpec.describe Alimento do
 
 		it "Genero definido correctamente" do
 			expect(@alimento.genero) == "hombre"
+		end
+
+		it "Ingesta de energia hombre" do
+			expect(@alimento.irenergia).to eq(3000)
+		end
+
+		it "Ingesta de energia mujer" do
+			expect(@alimento2.irenergia).to eq(2300)
 		end
 	end
 end
