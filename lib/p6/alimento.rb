@@ -7,4 +7,7 @@ class Alimento
 	end
 
 
+	def devolver_nombre
+		return @nombre
+	end
 end
