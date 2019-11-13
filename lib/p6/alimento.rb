@@ -1,38 +1,34 @@
 class Alimento
 
-	attr_reader :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno, :genero
+	attr_reader :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno
 
-	def initialize (nombre, proteinas, carbohidratos, lipidos, gei, terrerno, genero)
-		@nombre, @proteinas, @carbohidratos, @lipidos, @gei, @terreno, @genero= nombre, proteinas, carbohidratos, lipidos, gei, terreno, genero
+	def initialize (nombre, proteinas, carbohidratos, lipidos, gei, terrerno)
+		@nombre, @proteinas, @carbohidratos, @lipidos, @gei, @terreno = nombre, proteinas, carbohidratos, lipidos, gei, terreno
 	end
 
 
-	def devolver_nombre
+	def d_nombre
 		return @nombre
 	end
 
-	def devolver_proteina
+	def d_proteina
 		return @proteinas
 	end
 
-	def devolver_carbohidratos
+	def d_carbohidratos
 		return @carbohidratos
 	end
 
-	def devolver_lipidos
+	def d_lipidos
 		return @lipidos
 	end
 
-	def devolver_gei
+	def d_gei
 		return @gei
 	end
 
-	def devolver_terreno
+	def d_terreno
 		return @terreno
-	end
-
-	def devolver_genero
-		return @genero
 	end
 
 	def irenergia
