@@ -1,4 +1,4 @@
-require 'p6/p6.rb'
+require 'p6/alimento.rb'
 require 'p6/lista.rb'
 
 RSpec.describe Alimento do
