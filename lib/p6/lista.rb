@@ -35,4 +35,18 @@ class List
 			
 		return aux
 	end
+
+	def inserta_por_cabeza(value)
+		nodo=Node.new(value,nil,nil)
+		if(@head==nil)
+			@tail=nodo
+			@head=nodo
+		else
+			nodo.nest=@head
+			@head.prev=nodo
+			@head=nodo
+			nodo.prev=nil
+		end
+
+	end
 end
