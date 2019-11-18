@@ -42,5 +42,12 @@ RSpec.describe Alimento do
 			@lista.extraer_por_cola
 			expect(@lista.vacio).to be(true)
 		end
+
+		it "Correcto: se imprime bien" do
+			@lista.inserta_por_cola(1)
+			@lista.inserta_por_cola(2)
+			@lista.inserta_por_cola(3)
+			expect(@lista.to_s)=="[1][2][3]"
+		end
 	end
 end
