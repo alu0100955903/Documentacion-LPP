@@ -8,7 +8,7 @@ class List
 		@tail = nil
 	end
 
-	def insertar_por_cola(value)
+	def inserta_por_cola(value)
 		nodo=Node.new(value,nil,nil)
 		if(@tail==nil)
 			@tail=nodo
@@ -19,5 +19,20 @@ class List
 			@tail=nodo
 			nodo.nest=nil
 		end
+	end
+
+	def extraer_por_cola
+		if(@tail==nil)
+			puts "No hay nada que extraer (lista vacia)"
+		else
+			aux=@tail
+			@tail=@tail.prev
+			aux.prev=nil
+			if(@tail!=nil)
+				@tail.nest=nil
+			end
+		end
+			
+		return aux
 	end
 end
