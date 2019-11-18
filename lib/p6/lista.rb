@@ -68,4 +68,12 @@ class List
 		return aux
 
 	end
+
+	def vacio
+		if(@tail==nil)
+			return true
+		else
+			return false
+		end
+	end
 end
