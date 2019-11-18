@@ -49,4 +49,23 @@ class List
 		end
 
 	end
+
+	def extraer_por_cabeza
+		if(@head==nil)
+			puts "No hay nada que extraer (lista vacia)"
+		else
+			aux=@head
+			@head=@head.nest
+			if(head!=nil)
+				@head.prev=nil
+			end
+			aux.nest=nil
+			if(@head==nil)
+				@tail=nil
+			end
+		end			
+
+		return aux
+
+	end
 end
