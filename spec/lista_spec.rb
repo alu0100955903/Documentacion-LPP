@@ -114,5 +114,34 @@ RSpec.describe Alimento do
 			expect(@dieta_animal.gases).to eq(140)
 		end
 
+		
+		it "Gases anuales" do
+
+			@dieta_espanola.insertar_por_cola(@a1)
+			@dieta_espanola.insertar_por_cola(@a2)
+			@dieta_espanola.insertar_por_cola(@a3)
+			
+			@dieta_vasca.insertar_por_cola(@a4)
+			@dieta_vasca.insertar_por_cola(@a5)
+			@dieta_vasca.insertar_por_cola(@a6)
+			
+			@dieta_vegetaria.insertar_por_cola(@a7)
+			@dieta_vegetaria.insertar_por_cola(@a8)
+			@dieta_vegetaria.insertar_por_cola(@a9)
+
+			@dieta_vegetaliana.insertar_por_cola(@a10)
+			@dieta_vegetaliana.insertar_por_cola(@a11)
+			@dieta_vegetaliana.insertar_por_cola(@a12)
+
+			@dieta_animal.insertar_por_cola(@a13)
+			@dieta_animal.insertar_por_cola(@a14)
+			@dieta_animal.insertar_por_cola(@a15)
+
+			expect(@dieta_espanola.gases*365).to eq(40515)
+			expect(@dieta_vasca.gases*365).to eq(40880)
+			expect(@dieta_vegetaria.gases*365).to eq(31755)
+			expect(@dieta_vegetaliana.gases*365).to eq(23725)
+			expect(@dieta_animal.gases*365).to eq(51100)
+		end
 	end
 end
