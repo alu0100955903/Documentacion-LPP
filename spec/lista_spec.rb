@@ -9,29 +9,29 @@ RSpec.describe Alimento do
 		@lista = List.new(nil,nil)
 
 		#Alimentos dieta espanola
-		@a1 = Alimento.new("sopa" ,20,40,40,24,5)
-		@a2 = Alimento.new("carne",15,35,50,31,5)
-		@a3 = Alimento.new("yogur",25,45,30,56,5)
+		@a1 = Alimento.new("sopa" ,20,40,40,24,20)
+		@a2 = Alimento.new("carne",15,35,50,31,37)
+		@a3 = Alimento.new("yogur",25,45,30,56,12)
 		
 		#Alimentos dieta vasca
-		@a4 = Alimento.new("potaje"  ,20,65,15,65,5)
-		@a5 = Alimento.new("pescado" ,15,60,25,34,5)
-		@a6 = Alimento.new("natillas",10,55,35,13,5)
+		@a4 = Alimento.new("potaje"  ,20,65,15,65,42)
+		@a5 = Alimento.new("pescado" ,15,60,25,34,81)
+		@a6 = Alimento.new("natillas",10,55,35,13,63)
 
 		#Alimentos dieta vegetaria
-		@a7 = Alimento.new("gazpacho",20,40,40,34,5)
-		@a8 = Alimento.new("huevos"  ,15,35,50,32,5)
-		@a9 = Alimento.new("batido"  ,25,45,30,21,5)
+		@a7 = Alimento.new("gazpacho",20,40,40,34,10)
+		@a8 = Alimento.new("huevos"  ,15,35,50,32,29)
+		@a9 = Alimento.new("batido"  ,25,45,30,21,14)
 
 		#Alimentos dieta vegetaliana
-		@a10= Alimento.new("potaje"  ,15,35,50,12,5)
-		@a11= Alimento.new("ensalada",20,40,40,32,5)
-		@a12= Alimento.new("fruta"   ,25,45,30,21,5)
+		@a10= Alimento.new("potaje"  ,15,35,50,12,31)
+		@a11= Alimento.new("ensalada",20,40,40,32,15)
+		@a12= Alimento.new("fruta"   ,25,45,30,21,20)
 
 		#Alimentos dieta animal
-		@a13= Alimento.new("cocido",30,30,40,54,5)
-		@a14= Alimento.new("filete",30,20,50,65,5)
-		@a15= Alimento.new("batido",30,60,20,21,5)
+		@a13= Alimento.new("cocido",30,30,40,54,52)
+		@a14= Alimento.new("filete",30,20,50,65,77)
+		@a15= Alimento.new("batido",30,60,20,21,61)
 
 
 		#Dietas
@@ -143,5 +143,33 @@ RSpec.describe Alimento do
 			expect(@dieta_vegetaliana.gases*365).to eq(23725)
 			expect(@dieta_animal.gases*365).to eq(51100)
 		end
+
+		it "Metros cuadrados dieta espanola" do
+
+			@dieta_espanola.insertar_por_cola(@a1)
+			@dieta_espanola.insertar_por_cola(@a2)
+			@dieta_espanola.insertar_por_cola(@a3)
+			
+			@dieta_vasca.insertar_por_cola(@a4)
+			@dieta_vasca.insertar_por_cola(@a5)
+			@dieta_vasca.insertar_por_cola(@a6)
+			
+			@dieta_vegetaria.insertar_por_cola(@a7)
+			@dieta_vegetaria.insertar_por_cola(@a8)
+			@dieta_vegetaria.insertar_por_cola(@a9)
+
+			@dieta_vegetaliana.insertar_por_cola(@a10)
+			@dieta_vegetaliana.insertar_por_cola(@a11)
+			@dieta_vegetaliana.insertar_por_cola(@a12)
+
+			@dieta_animal.insertar_por_cola(@a13)
+			@dieta_animal.insertar_por_cola(@a14)
+			@dieta_animal.insertar_por_cola(@a15)
+
+			expect(@dieta_espanola.tierras).to eq(69)
+			expect(@dieta_vasca.tierras).to eq(186)
+			expect(@dieta_vegetaria.tierras).to eq(53)
+			expect(@dieta_vegetaliana.tierras).to eq(66)
+			expect(@dieta_animal.tierras).to eq(190)
 	end
 end
