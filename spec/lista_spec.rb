@@ -81,8 +81,11 @@ RSpec.describe Alimento do
 			@lista.insertar_por_cola(3)
 			expect(@lista.to_s)=="[1][2][3]"
 		end
+	end
 
-		it "Menus diarios" do
+	describe "Pruebas menu" do
+
+		it "Gases diarios" do
 
 			@dieta_espanola.insertar_por_cola(@a1)
 			@dieta_espanola.insertar_por_cola(@a2)
@@ -110,5 +113,6 @@ RSpec.describe Alimento do
 			expect(@dieta_vegetaliana.gases).to eq(65)
 			expect(@dieta_animal.gases).to eq(140)
 		end
+
 	end
 end

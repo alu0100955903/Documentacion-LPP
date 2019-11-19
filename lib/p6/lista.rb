@@ -105,4 +105,20 @@ class List
 
 	end
 
+	#Metodo gases diarios
+	def gases
+		puntero=@head
+		gases=0
+		if(@head!=nil)
+			while(puntero!=nil) do
+				gases+=puntero.value.gei
+				if(puntero.nest!=nil)
+					puntero=puntero.nest
+				else
+					puntero=nil
+				end
+			end
+		end
+		return gases
+	end
 end
