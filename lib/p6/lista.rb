@@ -121,4 +121,21 @@ class List
 		end
 		return gases
 	end
+
+	#Metodo tierras por menu
+	def tierras
+		puntero=@head
+		gases=0
+		if(@head!=nil)
+			while(puntero!=nil) do
+				gases+=puntero.value.terreno
+				if(puntero.nest!=nil)
+					puntero=puntero.nest
+				else
+					puntero=nil
+				end
+			end
+		end
+		return gases
+	end
 end

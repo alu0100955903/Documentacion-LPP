@@ -171,5 +171,6 @@ RSpec.describe Alimento do
 			expect(@dieta_vegetaria.tierras).to eq(53)
 			expect(@dieta_vegetaliana.tierras).to eq(66)
 			expect(@dieta_animal.tierras).to eq(190)
+		end
 	end
 end
