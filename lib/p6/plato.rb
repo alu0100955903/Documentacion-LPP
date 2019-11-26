@@ -6,6 +6,10 @@ class Plato
 		@nombre, @alimentos, @cantidades = nombre, alimentos, cantidades	
 	end
 
+	def get_alimento
+		return @alimentos
+	end
+
 	def por_proteinas
 		total_prot = @alimentos.get_proteinas
 	        total_nutr = @alimentos.get_nutrientes

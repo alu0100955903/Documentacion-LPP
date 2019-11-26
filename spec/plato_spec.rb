@@ -1,6 +1,7 @@
 require 'p6/alimento.rb'
 require 'p6/lista.rb'
 require 'p6/plato.rb'
+require 'p6/plato_hijo.rb'
 
 RSpec.describe Plato do
                 before :each do
@@ -56,11 +57,12 @@ RSpec.describe Plato do
                         @dieta_animal.insertar_por_cola(@a14)
                         @dieta_animal.insertar_por_cola(@a15)
 
-                        @cantidad_espanola = List.new(nil,nil)
-                        @cantidad_vasca = List.new(nil,nil)
-                        @cantidad_vegetaria = List.new(nil,nil)
+			#lista de cantidades
+                        @cantidad_espanola    = List.new(nil,nil)
+                        @cantidad_vasca       = List.new(nil,nil)
+                        @cantidad_vegetaria   = List.new(nil,nil)
                         @cantidad_vegetaliana = List.new(nil,nil)
-                        @cantidad_animal = List.new(nil,nil)
+                        @cantidad_animal      = List.new(nil,nil)
 
                         @cantidad_espanola.insertar_por_cola(25)
                         @cantidad_espanola.insertar_por_cola(25)
@@ -82,13 +84,14 @@ RSpec.describe Plato do
                         @cantidad_animal.insertar_por_cola(25)
                         @cantidad_animal.insertar_por_cola(25)
 
+			#Platos
                         @plato_espanol     = Plato.new("espanolito"   ,@dieta_espanola, @cantidad_espanola)
                         @plato_vasca       = Plato.new("vasquito"     ,@dieta_vasca, @cantidad_vasca)
                         @plato_vegetaria   = Plato.new("vegetariana"  ,@dieta_vegetaria, @cantidad_vegetaria)
                         @plato_vegetaliana = Plato.new("vegetalianita",@dieta_vegetaliana, @cantidad_vegetaliana)
                         @plato_animal      = Plato.new("animalito"    ,@dieta_animal, @cantidad_animal)
                 
-		
+			#Plato_hijo
 			@plato_hijo1 = Plato_hijo.new("espanolito" ,@dieta_espanola,@cantidad_espanola)
 			@plato_hijo2 = Plato_hijo.new("vas1quito"  ,@dieta_vasca,@cantidad_vasca)
 		end
@@ -137,7 +140,7 @@ RSpec.describe Plato do
 
 		describe "Pruebas comparable clase Plato_hijo" do
 			it "Prueba < de plato hijo" do
-				expect(@plato_hijo1 < @plato_hijo2).to eq(true)
+				expect(@plato_hijo2 < @plato_hijo1).to eq(true)
 			end
 		end
 end
