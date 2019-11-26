@@ -174,6 +174,23 @@ class List
 		return total_lipidos
 	end
 
+
+	def get_carbo
+		puntero=@head
+		total_carbohidratos=0
+		if(@head!=nil)
+			while(puntero!=nil) do
+				total_carbohidratos += puntero.value.lipidos
+				if(puntero.nest!=nil)
+					puntero = puntero.nest
+				else
+					puntero=nil
+				end
+			end
+		end
+		return total_carbohidratos
+	end
+
 	def get_nutrientes
 		puntero=@head
 		total_nutrientes=0

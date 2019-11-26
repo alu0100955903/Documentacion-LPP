@@ -19,4 +19,11 @@ class Plato
 		porcentaje_lipidos = (total_lip * 100) / total_nutr
 		return porcentaje_lipidos
 	end
+
+	def por_carbo
+		total_car  = @alimentos.get_carbo
+		total_nutr = @alimentos.get_nutrientes
+		porcentaje_carbo = (total_car * 100) /total_nutr
+		return porcentaje_carbo
+	end
 end
