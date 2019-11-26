@@ -212,7 +212,7 @@ RSpec.describe Alimento do
 			@lista.insertar_por_cola(@a2)
 			@lista.insertar_por_cola(@a3)
 
-			expect(@lista.min).to eq(@a1)
+			expect(@lista.min).to eq(@a3)
 		end
 
 		it "Prueba max" do
@@ -228,7 +228,7 @@ RSpec.describe Alimento do
 			@lista.insertar_por_cola(@a2)
 			@lista.insertar_por_cola(@a3)
 
-			expect(@lista.sort).to eq([@a1,@a2,@a3])
+			expect(@lista.sort).to eq([@a3,@a1,@a2])
 		end
 
 		it "Prueba select" do
@@ -244,7 +244,7 @@ RSpec.describe Alimento do
 			@lista.insertar_por_cola(@a2)
 			@lista.insertar_por_cola(@a3)
 
-			expect(@lista.collect{|i| @a1}). to eq([@a1,@a2,@a3])
+			expect(@lista.collect{|i| @a1}). to eq([@a1,@a1,@a1])
 		end
 	end	
 

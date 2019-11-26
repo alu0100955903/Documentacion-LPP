@@ -2,6 +2,8 @@ Node = Struct.new(:value, :nest, :prev)
 
 class List
 
+	include Enumerable
+
 	#Punteros head y tail
 	attr_reader :head, :tail
 	
@@ -137,5 +139,13 @@ class List
 			end
 		end
 		return gases
+	end
+
+	def each(&block)
+		puntero=@head
+		while(puntero!=nil) do
+			yield puntero.value
+			puntero=puntero.nest
+		end
 	end
 end
