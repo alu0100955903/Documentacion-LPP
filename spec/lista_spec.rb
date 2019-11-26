@@ -212,7 +212,15 @@ RSpec.describe Alimento do
 			@lista.insertar_por_cola(@a2)
 			@lista.insertar_por_cola(@a3)
 
-			expect(@lista.min).to eq(true)
+			expect(@lista.min).to eq(@a1)
+		end
+
+		it "Prueba max" do
+			@lista.insertar_por_cola(@a1)
+			@lista.insertar_por_cola(@a2)
+			@lista.insertar_por_cola(@a3)
+
+			expect(@lista.max).to eq(@a2)
 		end
 	end
 end
