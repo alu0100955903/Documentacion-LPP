@@ -1,4 +1,4 @@
-require 'p6/Alimento.rb'
+require 'p6/alimento.rb'
 require 'p6/lista.rb'
 require 'p6/plato.rb'
 
@@ -91,9 +91,13 @@ RSpec.describe Plato do
 
                 describe "Prueba Plato" do
 
-                          it "Nombre" do
+                          it "Plato tiene Nombre" do
 				  expect(@plato_espanol.nombre).to eq ("espanolito")
                           end
+
+			  it "Plato tiene alimentos" do
+				  expect(@plato_espanol.alimentos).to eq(@dieta_espanola)
+			  end
 
                 end
 end
