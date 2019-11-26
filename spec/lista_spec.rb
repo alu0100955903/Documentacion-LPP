@@ -195,5 +195,11 @@ RSpec.describe Alimento do
 		it "Prueba ==" do
 			expect(@a1==@a2).to eq(true)
 		end
+
+		it "Prueba between" do
+			expect(@a2.between?(@a1,@a2)).to eq(true)
+		end
+
+
 	end
 end
