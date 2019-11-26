@@ -1,5 +1,7 @@
 class Alimento
 
+	include Comparable
+
 	attr_reader :nombre, :proteinas, :carbohidratos, :lipidos, :gei, :terreno
 
 	def initialize (nombre, proteinas, carbohidratos, lipidos, gei, terreno)
@@ -34,5 +36,9 @@ class Alimento
 	def irenergia
 		@irenergia=(@lipidos*9)+(@proteinas*4)+(@carbohidratos*4)
 		return @irenergia
+	end
+	
+	def <=> (other)
+		irenergia <=> other.irenergia
 	end
 end

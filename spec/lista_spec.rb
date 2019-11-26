@@ -177,11 +177,11 @@ RSpec.describe Alimento do
 	describe "Pruebas comparable" do
 
 		it "Prueba <" do
-			expect(@a1<@a1).to eq(true)
+			expect(@a1<@a2).to eq(true)
 		end
 
 		it "Prueba >" do
-			expect(@a1>@a2).to eq(true)
+			expect(@a2>@a1).to eq(true)
 		end
 
 		it "Prueba <=" do
@@ -189,11 +189,11 @@ RSpec.describe Alimento do
 		end
 
 		it "Prueba >=" do
-			expect(@a1>=@a2).to eq(true)
+			expect(@a2>=@a1).to eq(true)
 		end
 
 		it "Prueba ==" do
-			expect(@a1==@a2).to eq(true)
+			expect(@a1==@a2).to eq(false)
 		end
 
 		it "Prueba between" do
@@ -201,7 +201,7 @@ RSpec.describe Alimento do
 		end
 
 		it "Prueba clamp" do
-			expect(@a1.clamp(0,100)).to eq(100)
+			expect(@a1.irenergia.clamp(0,100)).to eq(100)
 		end
 	end
 end
