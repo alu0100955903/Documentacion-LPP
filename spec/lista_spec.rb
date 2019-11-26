@@ -206,7 +206,7 @@ RSpec.describe Alimento do
 	end
 
 	describe "Pruebas enumerable [lista]" do
-	
+		
 		it "Prueba min" do
 			@lista.insertar_por_cola(@a1)
 			@lista.insertar_por_cola(@a2)
@@ -230,6 +230,14 @@ RSpec.describe Alimento do
 
 			expect(@lista.sort).to eq([@a1,@a2,@a3])
 		end
-	end
+
+		it "Prueba select" do
+			@lista.insertar_por_cola(@a1)
+			@lista.insertar_por_cola(@a2)
+			@lista.insertar_por_cola(@a3)
+
+			expect(@lista.select{|i| i.nombre == "sopa"}).to eq([@a1])
+		end
+	end	
 
 end
