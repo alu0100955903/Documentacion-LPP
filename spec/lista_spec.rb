@@ -200,6 +200,8 @@ RSpec.describe Alimento do
 			expect(@a2.between?(@a1,@a2)).to eq(true)
 		end
 
-
+		it "Prueba clamp" do
+			expect(@a1.clamp(0,100)).to eq(100)
+		end
 	end
 end
