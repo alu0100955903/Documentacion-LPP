@@ -99,6 +99,10 @@ RSpec.describe Plato do
 				  expect(@plato_espanol.alimentos).to eq(@dieta_espanola)
 			  end
 
+			  it "Plato tiene cantidades" do
+				  expect(@plato_espanol.cantidades).to eq(@cantidad_espanola)
+			  end
+
                 end
 end
 
