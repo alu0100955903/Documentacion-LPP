@@ -118,8 +118,12 @@ RSpec.describe Plato do
 
 		describe "Pruebas de clase" do
 
-			it "@Plato pertenece a Plato" do
+			it "@plato pertenece a Plato" do
 				expect(@plato_espanol.class).to eq(Plato)
+			end
+
+			it "@plato es una instancia de la clase Plato" do
+				expect(@plato_espanol.instance_of? Plato).to eq(true)
 			end
 		end
 end
