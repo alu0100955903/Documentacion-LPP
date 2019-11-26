@@ -106,7 +106,10 @@ RSpec.describe Plato do
 			  it "Plato calcula porcentaje de proteinas" do
 				  expect(@plato_espanol.por_proteinas).to eq(20)
 			  end
-
+			
+			  it "Plato calcula porcentaje de lipidos" do
+				  expect(@plato_espanol.por_lipidos).to eq(30)
+			  end
 			  
 
                 end
