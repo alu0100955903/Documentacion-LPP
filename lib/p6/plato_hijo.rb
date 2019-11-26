@@ -5,4 +5,6 @@ class Plato_hijo < Plato
 	def <=> (other)
 		por_proteinas <=> other.por_proteinas
 	end
+
+		
 end
