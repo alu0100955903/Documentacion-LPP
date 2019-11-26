@@ -238,6 +238,14 @@ RSpec.describe Alimento do
 
 			expect(@lista.select{|i| i.nombre == "sopa"}).to eq([@a1])
 		end
+
+		it "Prueba collect" do
+			@lista.insertar_por_cola(@a1)
+			@lista.insertar_por_cola(@a2)
+			@lista.insertar_por_cola(@a3)
+
+			expect(@lista.collect{|i| @a1}). to eq([@a1,@a2,@a3])
+		end
 	end	
 
 end
