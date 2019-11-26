@@ -173,4 +173,10 @@ RSpec.describe Alimento do
 			expect(@dieta_animal.tierras).to eq(190)
 		end
 	end
+
+	describe "Pruebas comparable" do
+
+		it "Prueba <" do
+			expect(@a1<@a1).to eq(true)
+		end
 end
