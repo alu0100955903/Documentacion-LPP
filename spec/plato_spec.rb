@@ -97,7 +97,7 @@ RSpec.describe Plato do
 			@plato_hijo3 = Plato_hijo.new("vegetariana",@dieta_vegetaria,@cantidad_vegetaria)
 		
 			#lista de platos
-			@lista_platos = Lista.new(nil,nil)
+			@lista_platos = List.new(nil,nil)
 
 			@lista_platos.insertar_por_cola(@plato_hijo1)
 			@lista_platos.insertar_por_cola(@plato_hijo2)
@@ -131,11 +131,11 @@ RSpec.describe Plato do
 			  end
 
 			  it "Calcular emisiones de gases del plato" do
-				  expect(@plato_espanol.calc_gases).to eq(50)
+				  expect(@plato_espanol.calc_gases).to eq(111)
 			  end
 
 			  it "Calcular gei del plato" do
-				  expect(@plato_espanol.calc_gei).to eq(50)
+				  expect(@plato_espanol.calc_terreno).to eq(69)
 			  end
                 end
 
@@ -181,27 +181,27 @@ RSpec.describe Plato do
 
 		end
 
-		describe "Pruebas enumerable clase Plato_hijo" do
-			it "Prueba max" do
+		#describe "Pruebas enumerable clase Plato_hijo" do
+		#	it "Prueba max" do
 			#	expect(@lista_platos.min).to eq(@plato_hijo1)
-			end
-
-			it "Prueba min" do
-			#	expect(@lista_platos.max).to eq(@plato_hijo1)
-			end
-
-			it "Prueba sort" do
-			#	expect(@lista_platos.sort).to eq(@plato_hijo2,@plato_hijo2,@plato_hijo1)
-			end
-
-			it "Prueba select" do
+		#	end
+		#
+		#	it "Prueba min" do
+		#	#	expect(@lista_platos.max).to eq(@plato_hijo1)
+		#	end
+		#
+		#	it "Prueba sort" do
+		#	#	expect(@lista_platos.sort).to eq(@plato_hijo2,@plato_hijo2,@plato_hijo1)
+		#	end
+	
+		#	it "Prueba select" do
 			#	expect(@lista_platos.select{|i| i.nombre == "espanolito"}).to eq([@plato_hijo1])
-			end
+		#	end
 
-			it "Prueba collect" do
+		#	it "Prueba collect" do
 			#	expect(@plista_platos.collect{|i| @plato_hijo1}).to eq([@plato_hijo1,@plato_hijo1,@plato_hijo1])
-			end
-		end
+		#	end
+		#end
 
 
 end
