@@ -111,7 +111,9 @@ RSpec.describe Plato do
 				  expect(@plato_espanol.por_lipidos).to eq(40)
 			  end
 			  
-
+			  it "Plato calcula porcentaje de carbohidratos" do
+				  expect(@plato_espanol.por_carbo).to eq(40)
+			  end
                 end
 end
 
