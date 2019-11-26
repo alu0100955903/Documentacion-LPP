@@ -157,6 +157,23 @@ class List
 		return total_proteina
 	end
 
+
+	def get_lipidos
+		puntero=@head
+		total_lipidos=0
+		if(@head!=nil)
+			while(puntero!=nil) do
+				total_lipidos += puntero.value.lipidos
+				if(puntero.nest!=nil)
+					puntero = puntero.nest
+				else
+					puntero=nil
+				end
+			end
+		end
+		return total_lipidos
+	end
+
 	def get_nutrientes
 		puntero=@head
 		total_nutrientes=0

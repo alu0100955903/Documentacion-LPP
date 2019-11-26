@@ -7,13 +7,16 @@ class Plato
 	end
 
 	def por_proteinas
-		
 		total_prot = @alimentos.get_proteinas
 	        total_nutr = @alimentos.get_nutrientes
-		
 		porcentaje_proteinas = (total_prot * 100) / total_nutr
-		
 		return porcentaje_proteinas	
-	
 	end	
+
+	def por_lipidos
+		total_lip  = @alimentos.get_lipidos
+		total_nutr = @alimentos.get_nutrientes
+		porcentaje_lipidos = (total_lip * 100) / total_nutr
+		return porcentaje_lipidos
+	end
 end
