@@ -174,7 +174,7 @@ RSpec.describe Alimento do
 		end
 	end
 
-	describe "Pruebas comparable" do
+	describe "Pruebas comparable [alimento]" do
 
 		it "Prueba <" do
 			expect(@a1<@a2).to eq(true)
@@ -202,6 +202,17 @@ RSpec.describe Alimento do
 
 		it "Prueba clamp" do
 			expect(@a1.irenergia.clamp(0,100)).to eq(100)
+		end
+	end
+
+	describe "Pruebas enumerable [lista]" do
+	
+		it "Prueba min"
+			@lista.insertar_por_cola(@a1)
+			@lista.insertar_por_cola(@a2)
+			@lista.insertar_por_cola(@a3)
+
+			expect(@lista.min).to eq(true)
 		end
 	end
 end
