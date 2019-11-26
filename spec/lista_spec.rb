@@ -179,4 +179,8 @@ RSpec.describe Alimento do
 		it "Prueba <" do
 			expect(@a1<@a1).to eq(true)
 		end
+
+		it "Prueba >" do
+			expect(@a1>@a2).to eq(true)
+		end
 end
