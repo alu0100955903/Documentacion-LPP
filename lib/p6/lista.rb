@@ -174,6 +174,22 @@ class List
 		return total_lipidos
 	end
 
+	def get_energia
+		puntero=@head
+		total_energia=0
+		if(@head!=nil)
+			while(puntero!=nil) do
+				total_energia += puntero.value.irenergia
+				if(puntero.nest!=nil)
+					puntero = puntero.nest
+				else
+					puntero=nil
+				end
+			end
+		end
+		return total_energia
+	end
+
 
 	def get_carbo
 		puntero=@head
