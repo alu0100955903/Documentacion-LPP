@@ -31,13 +31,4 @@ class Plato
 		return porcentaje_carbo
 	end
 
-	def calc_gases
-		gei = @alimentos.gases
-		return gei
-	end
-
-	def calc_terreno
-		ter = @alimentos.tierras
-		return ter	
-	end
 end

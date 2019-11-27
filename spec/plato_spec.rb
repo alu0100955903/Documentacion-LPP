@@ -130,13 +130,6 @@ RSpec.describe Plato do
 				  expect(@plato_espanol.por_carbo).to eq(40)
 			  end
 
-			  it "Calcular emisiones de gases del plato" do
-				  expect(@plato_espanol.calc_gases).to eq(111)
-			  end
-
-			  it "Calcular gei del plato" do
-				  expect(@plato_espanol.calc_terreno).to eq(69)
-			  end
                 end
 
 		describe "Pruebas de clase" do
