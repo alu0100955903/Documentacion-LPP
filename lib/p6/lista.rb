@@ -191,6 +191,23 @@ class List
 		return total_carbohidratos
 	end
 
+
+	def get_energia
+		puntero=@head
+		ener=0
+		if(@head!=nil)
+			while(puntero!=nil) do
+				ener+=puntero.value.irenergia
+				if(puntero.nest!=nil)
+					puntero=puntero.nest
+				else
+					puntero=nil
+				end
+			end
+		end
+		return ener
+	end
+
 	def get_nutrientes
 		puntero=@head
 		total_nutrientes=0

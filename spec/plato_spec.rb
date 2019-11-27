@@ -203,5 +203,20 @@ RSpec.describe Plato do
 			end
 		end
 
+		describe "Prueba funciones plato hijo" do
+			
+			  it "Calcular emisiones de gases del plato hijo" do
+				  expect(@plato_hijo1.calc_gases).to eq(111)
+			  end
+
+			  it "Calcular gei del plato hijo" do
+				  expect(@plato_hijo1.calc_terreno).to eq(69)
+			  end
+
+			  it "Calcular la energia del plato hijo" do
+				  expect(@plato_hijo1.eficiencia).to eq(1800)
+			  end
+		end
+
 
 end
