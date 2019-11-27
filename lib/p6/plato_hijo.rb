@@ -15,7 +15,7 @@ class Plato_hijo < Plato
 		ter = @alimentos.tierras
 		return ter
 	end
-
+	
 	def eficiencia
 		efi = @alimentos.get_energia
 		return efi
