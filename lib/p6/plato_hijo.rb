@@ -40,9 +40,6 @@ class Plato_hijo < Plato
 		        @huella_carbono=3.0
 		end
 		
-		puts @alimentos.get_energia
-		puts @alimentos.gases
-		
 		return (@huella_carbono+@huella_energia)/2
 	end
 end
