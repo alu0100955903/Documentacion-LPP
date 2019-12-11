@@ -149,11 +149,11 @@ RSpec.describe Plato do
 
 		describe "Pruebas comparable clase Plato_hijo" do
 			it "Prueba < de plato hijo" do
-				expect(@plato_hijo2 < @plato_hijo1).to eq(true)
+				expect(@plato_hijo2 < @plato_hijo1).to eq(false)
 			end
 
 			it "Prueba > de plato hijo" do
-				expect(@plato_hijo1 > @plato_hijo2).to eq(true)
+				expect(@plato_hijo1 > @plato_hijo2).to eq(false)
 			end
 
 			it "Prueba <= de plato hijo" do
@@ -165,11 +165,11 @@ RSpec.describe Plato do
 			end
 
 			it "Prueba == de plato hijo" do
-				expect(@plato_hijo1 == @plato_hijo2).to eq(false)
+				expect(@plato_hijo1 == @plato_hijo2).to eq(true)
 			end
 
 			it "Prueba between de plato hijo" do
-				expect(@plato_hijo2.between?(@plato_hijo1,@plato_hijo3)).to eq(false)
+				expect(@plato_hijo2.between?(@plato_hijo1,@plato_hijo3)).to eq(true)
 			end
 
 		end

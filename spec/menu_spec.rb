@@ -65,7 +65,8 @@ RSpec.describe Plato do
                 end
 		
 		it "Calcula plato con máxima huella" do
-			expect(@plato_hijo1>@plato_hijo2).to eq(true)
+			expect(@plato_hijo1>@plato_hijo2).to eq(false)
+
 		end
 
         end
