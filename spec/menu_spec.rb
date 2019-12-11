@@ -5,17 +5,17 @@ require 'p6/plato_hijo.rb'
 
 RSpec.describe Plato do
         before :each do
-                @a1 = Alimento.new("Potaje",43,21,54,3,4)
-                @a2 = Alimento.new("Carne",23,23,54,6,3)
-                @a3 = Alimento.new("Helado",434,54,3,5,4)
+                @a1 = Alimento.new("Potaje",1,1,1,1,1)
+                @a2 = Alimento.new("Carne",1,1,1,1,1)
+                @a3 = Alimento.new("Helado",1,1,1,1,1)
 
-                @a4 = Alimento.new("Potaje",43,21,54,3,4)
-                @a5 = Alimento.new("Carne",23,23,54,6,3)
-                @a6 = Alimento.new("Helado",434,54,3,5,4)
+                @a4 = Alimento.new("Potaje",3,3,3,3,3)
+                @a5 = Alimento.new("Carne",3,3,3,3,3)
+                @a6 = Alimento.new("Helado",3,3,3,3,3)
 
-                @a7 = Alimento.new("Potaje",43,21,54,3,4)
-                @a8 = Alimento.new("Carne",23,23,54,6,3)
-                @a9 = Alimento.new("Helado",434,54,3,5,4)
+                @a7 = Alimento.new("Potaje",20,40,40,34,10)
+                @a8 = Alimento.new("Carne",15,35,50,32,29)
+                @a9 = Alimento.new("Helado",25,45,30,21,14)
 
 		#Primer plato
                 @dieta = List.new(nil,nil)
@@ -24,9 +24,9 @@ RSpec.describe Plato do
                 @dieta.insertar_por_cola(@a3)
 
                 @cantidad = List.new(nil,nil)
-                @cantidad.insertar_por_cola(25)
-                @cantidad.insertar_por_cola(26)
-                @cantidad.insertar_por_cola(27)
+                @cantidad.insertar_por_cola(0)
+                @cantidad.insertar_por_cola(0)
+                @cantidad.insertar_por_cola(0)
 
                 @plato = Plato.new("plato1",@dieta,@cantidad)
                 @plato_hijo1 = Plato_hijo.new("plato1",@dieta,@cantidad)
@@ -36,6 +36,7 @@ RSpec.describe Plato do
                  @dieta2.insertar_por_cola(@a4)
                  @dieta2.insertar_por_cola(@a5)
                  @dieta.insertar_por_cola(@a6)
+
                  @cantidad2 = List.new(nil,nil)
                  @cantidad2.insertar_por_cola(25)
                  @cantidad2.insertar_por_cola(26)
@@ -56,18 +57,25 @@ RSpec.describe Plato do
                   @cantidad3.insertar_por_cola(27)
 
                   @plato3 = Plato.new("plato3",@dieta3,@cantidad3)
+                  @plato_hijo3 = Plato_hijo.new("plato3",@dieta3,@cantidad3)
 
         end
 
         describe "Prueba Huella Nutricional" do
                 it "Prueba funcion huella nutricional" do
-			expect(@plato.huella_nutricional).to eq(2.0)
+			expect(@plato_hijo1.huella_nutricional).to eq(1.0)
                 end
 		
 		it "Calcula plato con máxima huella" do
-			expect(@plato_hijo1>@plato_hijo2).to eq(false)
+			
+			array_menu=[]
+			array_menu << @plato_hijo1
+			array_menu << @plato_hijo2
+			array_menu << @plato_hijo3
 
+			expect(array_menu.max).to eq(@plato_hijo3)
 		end
+
 
         end
 end
