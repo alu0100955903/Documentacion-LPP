@@ -17,6 +17,7 @@ RSpec.describe Plato do
                 @a8 = Alimento.new("Carne",23,23,54,6,3)
                 @a9 = Alimento.new("Helado",434,54,3,5,4)
 
+		#Primer plato
                 @dieta = List.new(nil,nil)
                 @dieta.insertar_por_cola(@a1)
                 @dieta.insertar_por_cola(@a2)
@@ -28,8 +29,9 @@ RSpec.describe Plato do
                 @cantidad.insertar_por_cola(27)
 
                 @plato = Plato.new("plato1",@dieta,@cantidad)
+                @plato_hijo1 = Plato_hijo.new("plato1",@dieta,@cantidad)
 
-
+		#Segundo plato
                  @dieta2 = List.new(nil,nil)
                  @dieta2.insertar_por_cola(@a4)
                  @dieta2.insertar_por_cola(@a5)
@@ -40,7 +42,9 @@ RSpec.describe Plato do
                  @cantidad2.insertar_por_cola(27)
 
                  @plato2 = Plato.new("plato2",@dieta2,@cantidad2)
+                 @plato_hijo2 = Plato_hijo.new("plato2",@dieta2,@cantidad2)
 
+		 #Tercer plato
                   @dieta3 = List.new(nil,nil)
                   @dieta3.insertar_por_cola(@a7)
                   @dieta3.insertar_por_cola(@a8)
@@ -59,9 +63,10 @@ RSpec.describe Plato do
                 it "Prueba funcion huella nutricional" do
 			expect(@plato.huella_nutricional).to eq(2.0)
                 end
-
-
-
+		
+		it "Calcula plato con máxima huella" do
+			expect(@plato_hijo1>@plato_hijo2).to eq(true)
+		end
 
         end
 end
