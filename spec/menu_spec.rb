@@ -1,9 +1,9 @@
-require 'p6/Alimento.rb'
+require 'p6/alimento.rb'
 require 'p6/lista.rb'
 require 'p6/plato.rb'
 require 'p6/plato_hijo.rb'
 
-RSpec.describe Menu do
+RSpec.describe Plato do
         before :each do
                 @a1 = Alimento.new("Potaje",43,21,54,3,4)
                 @a2 = Alimento.new("Carne",23,23,54,6,3)
@@ -57,7 +57,7 @@ RSpec.describe Menu do
 
         describe "Prueba Huella Nutricional" do
                 it "Prueba funcion huella nutricional" do
-                        expect(@plato.huella_nutricional).to eq(20)
+			expect(@plato.huella_nutricional).to eq(2.0)
                 end
 
 
