@@ -6,21 +6,25 @@ class Plato_hijo < Plato
 		huella_nutricional <=> other.huella_nutricional
 	end
 
+	#Metodo que calcula los gases del plato
 	def calc_gases
 		gei = @alimentos.gases
 		return gei
 	end
 
+	#Metodo que calcula los terrenos del plato
 	def calc_terreno
 		ter = @alimentos.tierras
 		return ter
 	end
 	
+	#Metodo que calcula la energia que aporta el plato
 	def eficiencia
 		efi = @alimentos.get_energia
 		return efi
 	end
 
+	#Metodo que calcula el indice de huella nutricional del plato
 	def huella_nutricional
 		@huella_energia
 		if @alimentos.get_energia <=670

@@ -2,6 +2,7 @@ Node = Struct.new(:value, :nest, :prev)
 
 class List
 
+	#Include Enumerable
 	include Enumerable
 
 	#Punteros head y tail
@@ -141,6 +142,7 @@ class List
 		return gases
 	end
 
+	#Metodo que devuelve las proteinas de la lista
 	def get_proteinas
 		puntero=@head
 		total_proteina=0
@@ -157,7 +159,7 @@ class List
 		return total_proteina
 	end
 
-
+	#Metodo que devuelve los lipidos de la lista
 	def get_lipidos
 		puntero=@head
 		total_lipidos=0
@@ -174,6 +176,7 @@ class List
 		return total_lipidos
 	end
 
+	#Metodo que devuelve la energia de la lista
 	def get_energia
 		puntero=@head
 		total_energia=0
@@ -190,7 +193,7 @@ class List
 		return total_energia
 	end
 
-
+	#Metodo que devuelve los lipidos de la lista
 	def get_carbo
 		puntero=@head
 		total_carbohidratos=0
@@ -207,23 +210,7 @@ class List
 		return total_carbohidratos
 	end
 
-
-	def get_energia
-		puntero=@head
-		ener=0
-		if(@head!=nil)
-			while(puntero!=nil) do
-				ener+=puntero.value.irenergia
-				if(puntero.nest!=nil)
-					puntero=puntero.nest
-				else
-					puntero=nil
-				end
-			end
-		end
-		return ener
-	end
-
+	#Metodo que devuelve los nutrientes de la lista
 	def get_nutrientes
 		puntero=@head
 		total_nutrientes=0
@@ -240,6 +227,7 @@ class List
 		return total_nutrientes
 	end
 
+	#Metodo para Enumerar
 	def each(&block)
 		puntero=@head
 		while(puntero!=nil) do
